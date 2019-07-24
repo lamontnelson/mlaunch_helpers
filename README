@@ -14,6 +14,7 @@ your machine.
 How to use those tools
 ======================
 Customize your cluster by changing the following files:
+- NODES
 - VERSION
 - PORT
 - init
