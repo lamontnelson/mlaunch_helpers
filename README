@@ -11,13 +11,20 @@ cluster you created with 'mlaunch'.
 Also, it helps manage the ports if you run many clusters in parallel on
 your machine.
 
+Dependencies
+============
+- yq
+- m
+- mtools
+
+Install
+=======
+run setup.sh for osx or install the dependencies by hand.
+
 How to use those tools
 ======================
 Customize your cluster by changing the following files:
-- NODES
-- VERSION
-- PORT
-- init
+- cluster_config.yml
 
 Then:
 - create and start a cluster with './init'
@@ -26,4 +33,4 @@ Then:
 - reinitiate a cluster by first removing the 'data' directory (ensure all mongo processes are dead too)
 - start a mongo shell to the primary port of the cluster with './mongo'
 
-
+This project is derived from a similar project authored by Daniel Coupal.
