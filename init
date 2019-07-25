@@ -1,8 +1,4 @@
-NODES=`cat NODES`
-VERSION=`cat VERSION`
-PORT=`cat PORT`
-MONGODB_BIN=`m bin $VERSION`
-NUM_SHARDS=`cat SHARDS`
+. config.sh
 SHARDS=""
 for i in `seq 1 $NUM_SHARDS` 
 do

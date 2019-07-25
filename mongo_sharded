@@ -1,6 +1,4 @@
 # Starts a MongoDB shell, connecting to the mongos of the cluster
 #
-VERSION=`cat VERSION`
-PORT=`cat PORT`
-MONGODB_BIN=`m bin $VERSION`
+. config.sh
 $MONGODB_BIN/mongo -port $PORT

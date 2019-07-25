@@ -1,17 +1,14 @@
 # Starts a MongoDB shell in replica set mode
 #
-NODES=`cat NODES`
-SHARD=${1:-1}
-VERSION=`cat VERSION`
-PORT=`cat PORT`
-PORT=$((PORT+NODES*SHARD))
-MONGODB_BIN=`m bin $VERSION`
+. config.sh
+TARGET_SHARD=${1:-1}
+TARGET_PORT=$((PORT+NODES*TARGET_SHARD))
 
 if [ "$#" -ne 1 ]; then
 	echo "usage: $0 <shard-number>"
 	exit 1
 fi
 
-CMD="$MONGODB_BIN/mongo mongodb://localhost:$PORT/test?replicaSet=sh$SHARD"
+CMD="$MONGODB_BIN/mongo mongodb://localhost:$TARGET_PORT/test?replicaSet=sh$TARGET_SHARD"
 echo "$CMD"
 $CMD

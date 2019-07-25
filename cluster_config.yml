@@ -1,0 +1,4 @@
+nodes: 3
+shards: 3
+port: 41130
+version: 4.1.13

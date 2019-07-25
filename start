@@ -1,3 +1,2 @@
-VERSION=`cat VERSION`
-MONGODB_BIN=`m bin $VERSION`
+. config.sh
 mlaunch start --binarypath $MONGODB_BIN
